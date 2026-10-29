@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taschenrechner</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+  <script src="calculator.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="Dunkelmodus aktivieren"><span class="theme-orb" aria-hidden="true"></span></button>
+  <main class="calculator" aria-labelledby="title">
+    <header><h1 id="title">Taschenrechner<span>.</span></h1></header>
+    <section class="screen" aria-label="Anzeige">
+      <div id="expression">Bereit für deine Rechnung</div>
+      <output id="result" aria-live="polite" aria-atomic="true">0</output>
+    </section>
+    <div class="keys" aria-label="Tastenfeld">
+      <button class="utility" data-action="clear" title="Escape">AC</button>
+      <button class="utility" data-action="sign" aria-label="Vorzeichen wechseln">±</button>
+      <button class="utility" data-action="percent" aria-label="Durch hundert teilen">%</button>
+      <button class="operator" data-operation="/" aria-label="Dividieren">÷</button>
+      <button data-digit="7">7</button><button data-digit="8">8</button><button data-digit="9">9</button>
+      <button class="operator" data-operation="*" aria-label="Multiplizieren">×</button>
+      <button data-digit="4">4</button><button data-digit="5">5</button><button data-digit="6">6</button>
+      <button class="operator" data-operation="-" aria-label="Subtrahieren">−</button>
+      <button data-digit="1">1</button><button data-digit="2">2</button><button data-digit="3">3</button>
+      <button class="operator" data-operation="+" aria-label="Addieren">+</button>
+      <button data-action="backspace" aria-label="Letzte Ziffer löschen" title="Backspace">⌫</button>
+      <button data-digit="0">0</button><button data-action="decimal" aria-label="Dezimalkomma">,</button>
+      <button class="equals" data-action="equals" aria-label="Ergebnis">=</button>
+    </div>
+    <footer>Auch mit Tastatur · Enter = Ergebnis · Esc = Löschen</footer>
+  </main>
+</body>
+</html>
+
